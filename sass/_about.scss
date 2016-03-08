@@ -1,0 +1,13 @@
+.about {
+	background: $yellow;
+
+	.biography-quote {
+		background: $blue;
+		color: $white;
+
+		.biography-background{
+			color: $grey;
+			border: 2px solid #f0f;
+		}
+	}
+}

@@ -7,17 +7,35 @@
 * Author URI: http://hackeryou.com
 */
 
+/* COLOUR VARIABLES
+-------------------
+*/
+$blue: #3D3F46;
+$bluefooter: #4B4D55;
+$grey: #A6A3A3;
+$yellow: #FFDA76;
+$lightgrey: #EFEEE9;
+$lightwhite: #F6F5EF;
+$white: #fff;
+
+
 @import 'normalize';
 @import 'typography';
 @import 'navigation';
-@import 'sidebar';
-@import 'comments';
+@import 'header';
+@import 'portfolio';
+@import 'about';
+@import 'contact';
 @import 'footer';
 /*
 ====================================
 Default Styling
 ====================================
 */
+
+html {
+	font-size: 62.5%;
+}
 
 img {
 	max-width: 100%;
@@ -27,20 +45,33 @@ body {
 	color: #333;
 }
 
-.container {
-	max-width: 1200px;
+.wrapper {
+	max-width: 1080px;
 	margin: 0 auto;
 }
 
-.content {
-	float: left;
-	width: 65%;
-	margin-right: 5%;
+.flex-left{
+	width: 20%;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
 }
 
-.full {
-	width: 100%;
+.flex-right {
+	width: 80%;
+	margin-left: 20%;
 }
+ ul {
+ 	list-style: none;
+ 	padding-left: 0;
+ }
+
+ a {
+ 	text-decoration: none;
+ }
+
+
 
 
 

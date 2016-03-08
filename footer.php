@@ -1,6 +1,6 @@
 <footer>
-  <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+  <div class="wrapper">
+    <p>&copy; Aurelie Dufour <?php echo date('Y'); ?> made with <i class="fa fa-heart"></i> in Toronto</p>
   </div>
 </footer>
 
