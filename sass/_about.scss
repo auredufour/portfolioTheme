@@ -1,13 +1,63 @@
-.about {
+.about-flex {
 	background: $yellow;
+	position: relative;
+	// top: -13rem;
+	padding: 10rem 10rem 16rem;
+	display: flex;
+
 
 	.biography-quote {
+		flex: 1 0 28%;
 		background: $blue;
 		color: $white;
+		padding: 3rem;
+		margin: 0;
+		flex-flow: row wrap;
+		position: relative;
+		order: -1;
+		top: 12rem;
+		left: 2rem;
+		height: 100%;
+
+		p {
+			z-index: 200;
+			position: relative;
+			line-height: 3rem;
+
+		}
 
 		.biography-background{
-			color: $grey;
-			border: 2px solid #f0f;
 		}
+
+		.biography-background span{
+			color: $bluefooter;
+			font-family: "Playfair Display";
+			font-size: 40rem;
+			position: absolute;
+			line-height: 0;
+			margin: 0;
+			padding: 0;
+			top: 0;
+			transform: rotate(180deg);
+		}
+		.biography-background span:first-child {
+			bottom: 13rem;
+			right: 0rem;
+		}
+
+		.biography-background span:nth-child(2){
+			transform: rotate(0deg);
+			top: 13rem;	
+			left: 0rem;		
+		}
+	}
+
+	.biography-content {
+		flex: 1 0 70%;
+		background: $white;
+		padding: 5rem;
+		margin: 0;
+		box-shadow: 1rem 1rem 1.1rem rgba(0,0,0,0.08);
+
 	}
 }

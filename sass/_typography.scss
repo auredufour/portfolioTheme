@@ -1,11 +1,27 @@
 body {
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 }
 
 .flex-left {
 	color: $white;
 	font-size: 1.6rem;
 
+}
+
+header {
+	font-size: 4.2rem;
+	color: $blue;
+
+	a{
+		color: $blue;
+	}
+}
+
+.contact {
+	h3 {
+		font-family: "Playfair Display";
+		font-size: 4.5rem;
+	}
 }
 
 /* paragraphs */

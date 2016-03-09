@@ -1,4 +1,69 @@
 .contact {
 	background: $blue;
 	color: $lightgrey;
+	position: relative;
 }
+.contact-flex {
+	display: flex;
+	flex-flow: row wrap;
+	padding: 4rem 0;
+}
+
+.form-text, .form-container {
+	flex: 1 0 50%;
+	padding: 2rem;
+}
+
+.form-text {
+	padding: 0 13rem;
+
+	h3 {
+		margin-top: 0;
+	}
+}
+.contact-flex {
+	position: relative;
+	padding: 13rem 0;
+	a {
+		color: $yellow;
+	}
+	 	.line {
+		border-bottom: 0.6rem solid $white;
+		width: 8rem;
+		position: absolute;
+		top: 28rem;
+
+	}
+	p {
+		padding: 2rem 0;
+	}
+}
+form input, textarea {
+	padding: 1.5rem;
+	margin: 1.5rem 0;
+	border-radius: 0.6rem;
+	border: none;
+	background: $lightgrey;
+}
+
+form input[type=submit] {
+	color:$blue;
+	background: $yellow;
+}
+
+form input[type=text] {
+	margin-top: 0;
+}
+
+ .contact-flex form p {
+		margin: 0;
+		padding: 0;
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill  {
+		-webkit-box-shadow: 0 0 0px 1000px $white inset;
+		border: 1px solid $white;
+	}
+	textarea, input, input:focus, input:active, ::-webkit-input-placeholder, a {
+		outline: none;
+	}

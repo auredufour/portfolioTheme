@@ -6,11 +6,11 @@
 	.menu {
 		margin: 0;
 		padding: 2rem 0;
-		border: 0.2rem solid #f0f;
 		display: flex;
 		flex-flow: wrap;
 
 	}
+	
 	.line {
 		border-bottom: 1px solid $white;
 		width: 40%;
@@ -37,6 +37,7 @@
 	}
 	#menu-social-media-links {
 		position: absolute;
+		margin: 2rem;
 		bottom: 2rem;
 		right: 0;
 		left: 0;

@@ -14,35 +14,38 @@
 
 		<?php $portfolioQuery = new WP_Query(array(
      	 	'posts_per_page' => 5,
-   	   	'post_type' => 'portfolio'
+   	   		'post_type' => 'portfolio',
+   	   		'order' => 'ASC'
   	  )); ?>
 
-    	<div class="wrapper">
-    		<div class="portfolio-content">
-    			<div class="portfolio-text">
 
 				<?php if( $portfolioQuery -> have_posts()):  ?>
     			<?php while($portfolioQuery -> have_posts()): ?>
        				<?php $portfolioQuery -> the_post();?>
 
+    	<div class="portfolio-content">
+    		<div class="wrapper portfolio-skew">
+    			<div class="portfolio-text">
         			<h2><?php the_title(); ?></h2>
          			<?php while(has_sub_field('images')): ?>
+        			<h4><?php the_sub_field('project_number') ?></h4>
 			<!--  <p><?php the_sub_field('caption'); ?></p>-->  
 				</div>        			
 				<div class="portfolio-item-image">
 					<?php $image = get_sub_field('image') ?>
-         			<img src=" <?php echo $image['sizes']['medium'] ?>" alt="">
+         			<img src=" <?php echo $image['sizes']['large'] ?>" alt="">
          		</div>
+         	</div>
        				<?php endwhile; ?>
+		</div>
      			<?php endwhile; ?>
     		<?php wp_reset_postdata(); ?>
     		<?php endif; ?>
-    		</div>
-		</div>
+    	
 	</section>
 
 	<section class="about">
-			<div class="wrapper">
+			<div class="wrapper about-flex">
 
 		<?php if( have_rows('biography') ): ?>
 			<?php while ( have_rows('biography') ) : the_row(); ?> 
@@ -53,8 +56,8 @@
 		 		<div class="biography-quote">
 		 			<?php the_sub_field('biography-quote'); ?>
 		 			<div class="biography-background">
-		 				<?php the_sub_field('biography-quote-background');?>
-		 				<?php the_sub_field('biography-quote-background');?>
+		 				<span><?php the_sub_field('biography-quote-background');?></span>
+		 				<span><?php the_sub_field('biography-quote-background');?></span>
 		 			</div>
 		 		</div>
 			<?php endwhile; ?> 
@@ -62,15 +65,16 @@
 		</div>	
 	</section>
 
+
 	<section class="contact">
-			<div class="wrapper">
+			<div class="wrapper contact-flex">
 
 		<?php if( have_rows('form') ): ?>
 			<?php while ( have_rows('form') ) : the_row(); ?> 
 				<div class="form-text">
-		 			<?php the_sub_field('form-title'); ?>
-		 			<?php the_sub_field('form-text'); ?>
-		 			<?php the_sub_field('form-link-email'); ?>
+		 			<h3><?php the_sub_field('form-title'); ?></h3>
+		 			<div class="line"></div>
+		 			<?php the_sub_field('form-text'); ?><a href="mailto:<?php the_sub_field('form-link-email'); ?>"><?php the_sub_field('form-link-email'); ?></a> 
 		 		</div>
 		 		<div class="form-container">
 		 			<?php the_sub_field('form-form'); ?>
@@ -79,6 +83,6 @@
 		<?php endif; ?>		
 		</div> 
 	</section>
-	<?php get_footer(); ?>
 	</div>
 	</div> <!-- END DIV WRAPPER FLEX -->
+<?php get_footer(); ?>

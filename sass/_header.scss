@@ -1,4 +1,11 @@
 header {
 	background: $yellow;
 	margin: 0;
+	padding: 15rem 14rem;
+	z-index: 200;
+	position: relative;
+
+	a {
+		border-bottom: 2px solid $blue;
+	}
 }
