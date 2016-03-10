@@ -1,89 +1,86 @@
+// PORTFOLIO AREA
+
 .portfolio {
 	background: $lightwhite;
 }
 
+// Style on the main elements of the portfolio
 .portfolio-skew {
-	transform: skewY(10deg);
 	display: flex;
-	position: relative;
 	justify-content: space-between;
-	padding-bottom: 0; 
 	align-items: flex-end;
+	position: relative;
+	transform: skewY(10deg);
 }
 
 .portfolio-content {
+	margin:0;
+	padding: 8rem 10rem;
 	transform: skewY(-10deg);
 	z-index: 0;
-	padding: 8rem 10rem;
-	margin:0;
+}
 
+.portfolio-item-image{
+	flex: 1 0 65%;
+	position: relative;
+	bottom: 0;
 
-	.portfolio-item-image{
-		flex: 1 0 65%;
-		position: relative;
+	img {
+		width: 90%;
+		margin: 0;
 		bottom: 0;
-
-		img {
-			width: 90%;
-			margin: 0;
-			bottom: 0;
-		}
-	}
-
-	.portfolio-text {
-		flex: 1 0 30%;
-		height: 100%;
-		position: relative;
-		z-index: 999;
-
-		p {
-			padding-bottom: 2rem;
-			margin: 0;
-		}
 	}
 }
 
+.portfolio-text {
+	flex: 1 0 30%;
+	position: relative;
+	height: 100%;
+	z-index: 999;
+
+	p {
+		margin: 0;
+		padding-bottom: 2rem;
+	}
+}
+
+// Style on target elements to have the alternate order
 .portfolio-content:nth-child(1){
 	padding: 8rem 10rem 8rem;
+
 	.portfolio-skew {
 		top: 8rem;
-	}
-}
-.portfolio-content:nth-child(4){
-	padding-bottom: 14rem;
-	.portfolio-skew {
-		top: 3rem;
 	}
 }
 
 .portfolio-content:nth-child(2){
 	padding: 14rem 10rem;
+
 	.portfolio-skew {
 		top: 2rem;
-
-		.portfolio-text {
-			z-index: 999999;
-
-		}
 	}
 }
-.portfolio-content:nth-child(5){
-	padding: 10rem 10rem 10rem;
+
+.portfolio-content:nth-child(4){
+	padding-bottom: 14rem;
+
 	.portfolio-skew {
-	bottom: 2rem;
-}
+		top: 3rem;
+	}
 }
 
-.portfolio-content:nth-child(1), 
-.portfolio-content:nth-child(3), 
-.portfolio-content:nth-child(5) {
+.portfolio-content:nth-child(5){
+	padding: 10rem;
+
+	.portfolio-skew {
+		bottom: 2rem;
+	}
+}
+// Style on multiple elements 
+.portfolio-content:nth-child(odd){
 	background: $lightwhite;
 	position: relative;
 	z-index: 999;
-
-	.portfolio-skew {
-		z-index: 9999;
-	}
 
 	.portfolio-item-image {
 		position: relative;
@@ -94,15 +91,10 @@
 	}
 }
 
-.portfolio-content:nth-child(2), 
-.portfolio-content:nth-child(4) {
+.portfolio-content:nth-child(even) {
 	background: $lightgrey;
 	position: relative;
 	z-index: 998;
-
-	.portfolio-skew {
-
-	}
 
 	.portfolio-item-image {
 		order: -1;
@@ -112,40 +104,38 @@
 		order: 1;
 	}
 }
-
+// Style on the links GITHUB and LIVE
 .flex {
 	display: flex;
-
 }
+
 .live {
 	display: flex;
 	flex: 1 0 60%;
-	background: $yellow;
-	border-radius: 0.6rem;
-	padding: 1.8rem 2.5rem;
-	margin-right: 0;
 	justify-content: space-between;
 	align-items: center;
 	position: relative;
 	left: -2rem;
-
-	a {
-		color: $blue;}
+	margin-right: 0;
+	padding: 1.8rem 2.5rem;
+	border-radius: 0.6rem;
+	background: $yellow;
 
 	img {
 		width: 8px;
 		height: 11px;
 	}
 }
+
 .github {
-	order: -1;	
 	flex: 1 0 30%;
+	order: -1;	
 
 	img {
 		width: 60%;
-		background: $yellow;
 		padding: 1.5rem;
 		border-radius: 0.6rem;
+		background: $yellow;
 	}
 }
 

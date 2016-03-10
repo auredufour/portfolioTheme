@@ -7,6 +7,9 @@ body {
 	font-size: 1.6rem;
 
 }
+a {
+	color: $blue
+}
 
 header {
 	font-size: 4.2rem;
@@ -15,6 +18,9 @@ header {
 	a{
 		color: $blue;
 	}
+}
+.skills {
+	font-size: 2rem;
 }
 
 .contact {
