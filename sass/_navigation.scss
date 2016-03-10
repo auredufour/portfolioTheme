@@ -2,6 +2,7 @@
 	background: $blue;
 	position: relative;
 	text-align: center;
+	padding: 4rem 0;
 
 	.menu {
 		margin: 0;
@@ -12,22 +13,22 @@
 	}
 	
 	.line {
-		border-bottom: 1px solid $white;
-		width: 40%;
-		position: absolute;
-		top: 7rem;
+		border-bottom: 2px solid $white;
+		width: 10%;
+		position: relative;
+		top: 12rem;
 		left: 50%;
 		transform: translateX(-50%);
 	}
 
 	.line:nth-child(2){
-		top: 14rem;
+		top: 22rem;
 	}
 
 	#menu-menu-1 {
 		flex-flow: column;
 		li {
-			padding: 2rem;
+			padding: 4rem;
 		}
 
 		a {

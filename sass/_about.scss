@@ -1,5 +1,11 @@
-.about-flex {
+.about {
 	background: $yellow;
+	position: relative;
+	z-index: 100;
+	
+}
+
+.about-flex {
 	position: relative;
 	// top: -13rem;
 	padding: 10rem 10rem 16rem;

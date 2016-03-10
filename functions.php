@@ -277,3 +277,9 @@ function get_post_parent($post) {
 		return $post->ID;
 	}
 }
+function hackeryou_get_thumbnail_url( $post ) {
+	$imageID = get_post_thumbnail_id( $post->ID ); 
+	$imageURL = wp_get_attachment_url( $imageID );
+	return $imageURL;
+	//want to return the url to be able to do something with it
+}

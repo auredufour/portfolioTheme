@@ -10,41 +10,41 @@
     	</div>
 	</header>
 
-	<section class="portfolio">
-
+	<section class="portfolio" id="work">
 		<?php $portfolioQuery = new WP_Query(array(
      	 	'posts_per_page' => 5,
    	   		'post_type' => 'portfolio',
    	   		'order' => 'ASC'
-  	  )); ?>
+  	  	)); ?>
 
+		<?php if( $portfolioQuery -> have_posts()):  ?>
+    		<?php while($portfolioQuery -> have_posts()): ?>
+       			<?php $portfolioQuery -> the_post();?>
+         		<?php while(has_sub_field('project_item')): ?>
 
-				<?php if( $portfolioQuery -> have_posts()):  ?>
-    			<?php while($portfolioQuery -> have_posts()): ?>
-       				<?php $portfolioQuery -> the_post();?>
-
-    	<div class="portfolio-content">
-    		<div class="wrapper portfolio-skew">
-    			<div class="portfolio-text">
-        			<h2><?php the_title(); ?></h2>
-         			<?php while(has_sub_field('images')): ?>
-        			<h4><?php the_sub_field('project_number') ?></h4>
-			<!--  <p><?php the_sub_field('caption'); ?></p>-->  
-				</div>        			
-				<div class="portfolio-item-image">
-					<?php $image = get_sub_field('image') ?>
-         			<img src=" <?php echo $image['sizes']['large'] ?>" alt="">
+    		<div class="portfolio-content">
+    			<div class="wrapper portfolio-skew">
+    				<div class="portfolio-text">
+        				<h4><?php the_sub_field('project_number') ?></h4>
+        				<h2><?php the_title(); ?></h2>
+						<?php the_sub_field('project_caption'); ?></p>
+						<?php the_content(); ?>
+						<?php the_sub_field('project_button_live'); ?>
+						<?php  the_sub_field('project_button_github');?>
+					</div>        			
+					<div class="portfolio-item-image">
+						<?php $image = get_sub_field('project_image') ?>
+         				<img src=" <?php echo $image['sizes']['large'] ?>" alt="">
+         			</div>
          		</div>
-         	</div>
-       				<?php endwhile; ?>
-		</div>
-     			<?php endwhile; ?>
+			</div>
+       			<?php endwhile; ?>
+     		<?php endwhile; ?>
     		<?php wp_reset_postdata(); ?>
     		<?php endif; ?>
-    	
 	</section>
 
-	<section class="about">
+	<section class="about" id="about">
 			<div class="wrapper about-flex">
 
 		<?php if( have_rows('biography') ): ?>
@@ -66,7 +66,7 @@
 	</section>
 
 
-	<section class="contact">
+	<section class="contact" id="contact">
 			<div class="wrapper contact-flex">
 
 		<?php if( have_rows('form') ): ?>
@@ -84,5 +84,5 @@
 		</div> 
 	</section>
 	</div>
-	</div> <!-- END DIV WRAPPER FLEX -->
+</div> <!-- END DIV WRAPPER FLEX -->
 <?php get_footer(); ?>

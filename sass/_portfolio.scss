@@ -1,35 +1,46 @@
 .portfolio{
 	background: $lightwhite;
 	z-index: -100;
+	position: relative;
 }
 	.portfolio-content {
 	transform: skewY(-10deg);
-	position: relative;
-	z-index: 0;
-	padding: 15rem 6rem;
+	z-index: -9990;
+	padding: 6rem 6rem;
 	margin:0;
-	// top: -10rem;
-
-}
-.portfolio-content:nth-child(1){
-
 }
 
-
-.portfolio-content:nth-child(2), .portfolio-content:nth-child(4){
-	background: $lightgrey;
-
-	.wrapper{
-	}
-}
 .portfolio-content:nth-child(1), .portfolio-content:nth-child(3), .portfolio-content:nth-child(5) {
 	background: $lightwhite;
+	.portfolio-item-image {
+		width: 50%;
+		flex: 1 0 50%;
+		top: 6rem;
+		right:0;
+		position: relative;
+		z-index: 900;
+	}
+	.portfolio-text {
+		width: 50%;
+	}
+
 }
 
-.portfolio-content:nth-child(1), .portfolio-content:nth-child(5) {
+.portfolio-content:nth-child(2), .portfolio-content:nth-child(4) {
+		background: $lightgrey;
+
 	padding: 10rem 6rem;
+		.portfolio-item-image {
+		flex: 1 0 50%;
+		order: -1;
+	}
+	.portfolio-text {
+		flex: 1 0 50%;
+		order: 1;
+	}
 }
 
 .portfolio-skew {
 	transform: skewY(10deg);
+	display: flex;
 }
