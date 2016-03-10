@@ -9,7 +9,10 @@
 		padding: 2rem 0;
 		display: flex;
 		flex-flow: wrap;
+	}
 
+	img {
+		margin: 2rem auto;
 	}
 	
 	.line {
@@ -50,8 +53,6 @@
 				color: $grey;
 			}
 		}
-
-	
 	}
 }
 

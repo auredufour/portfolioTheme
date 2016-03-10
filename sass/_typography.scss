@@ -24,6 +24,34 @@ header {
 	}
 }
 
+ h4 {	
+ 	position: absolute;
+ 	font-family: "Playfair Display";
+	color: $white;
+	font-size: 28rem;
+	top: -3rem;
+	text-align: center;
+	line-height: 0;
+	margin: 0;
+	padding: 0;
+
+}
+
+
+.portfolio-text {
+h2 {
+	font-size: 3rem;
+	margin-top: 1rem;
+}
+p {
+	line-height: 2.8rem;
+}
+}
+ .skills{
+	font-weight: 700;
+	color: $bluefooter;
+ }
+
 /* paragraphs */
 
 p {

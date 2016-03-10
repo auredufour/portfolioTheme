@@ -1,46 +1,151 @@
-.portfolio{
+.portfolio {
 	background: $lightwhite;
-	z-index: -100;
-	position: relative;
-}
-	.portfolio-content {
-	transform: skewY(-10deg);
-	z-index: -9990;
-	padding: 6rem 6rem;
-	margin:0;
-}
-
-.portfolio-content:nth-child(1), .portfolio-content:nth-child(3), .portfolio-content:nth-child(5) {
-	background: $lightwhite;
-	.portfolio-item-image {
-		width: 50%;
-		flex: 1 0 50%;
-		top: 6rem;
-		right:0;
-		position: relative;
-		z-index: 900;
-	}
-	.portfolio-text {
-		width: 50%;
-	}
-
-}
-
-.portfolio-content:nth-child(2), .portfolio-content:nth-child(4) {
-		background: $lightgrey;
-
-	padding: 10rem 6rem;
-		.portfolio-item-image {
-		flex: 1 0 50%;
-		order: -1;
-	}
-	.portfolio-text {
-		flex: 1 0 50%;
-		order: 1;
-	}
 }
 
 .portfolio-skew {
 	transform: skewY(10deg);
 	display: flex;
+	position: relative;
+	justify-content: space-between;
+	padding-bottom: 0; 
+	align-items: flex-end;
 }
+
+.portfolio-content {
+	transform: skewY(-10deg);
+	z-index: 0;
+	padding: 8rem 10rem;
+	margin:0;
+
+
+	.portfolio-item-image{
+		flex: 1 0 65%;
+		position: relative;
+		bottom: 0;
+
+		img {
+			width: 90%;
+			margin: 0;
+			bottom: 0;
+		}
+	}
+
+	.portfolio-text {
+		flex: 1 0 30%;
+		height: 100%;
+		position: relative;
+		z-index: 999;
+
+		p {
+			padding-bottom: 2rem;
+			margin: 0;
+		}
+	}
+}
+
+.portfolio-content:nth-child(1){
+	padding: 8rem 10rem 8rem;
+	.portfolio-skew {
+		top: 8rem;
+	}
+}
+.portfolio-content:nth-child(4){
+	padding-bottom: 14rem;
+	.portfolio-skew {
+		top: 3rem;
+	}
+}
+
+.portfolio-content:nth-child(2){
+	padding: 14rem 10rem;
+	.portfolio-skew {
+		top: 2rem;
+
+		.portfolio-text {
+			z-index: 999999;
+
+		}
+	}
+}
+.portfolio-content:nth-child(5){
+	padding: 10rem 10rem 10rem;
+	.portfolio-skew {
+	bottom: 2rem;
+}
+}
+
+.portfolio-content:nth-child(1), 
+.portfolio-content:nth-child(3), 
+.portfolio-content:nth-child(5) {
+	background: $lightwhite;
+	position: relative;
+	z-index: 999;
+
+	.portfolio-skew {
+		z-index: 9999;
+	}
+
+	.portfolio-item-image {
+		position: relative;
+
+		img {
+			margin-left: 10%;
+		}
+	}
+}
+
+.portfolio-content:nth-child(2), 
+.portfolio-content:nth-child(4) {
+	background: $lightgrey;
+	position: relative;
+	z-index: 998;
+
+	.portfolio-skew {
+
+	}
+
+	.portfolio-item-image {
+		order: -1;
+	}
+
+	.portfolio-text {
+		order: 1;
+	}
+}
+
+.flex {
+	display: flex;
+
+}
+.live {
+	display: flex;
+	flex: 1 0 60%;
+	background: $yellow;
+	border-radius: 0.6rem;
+	padding: 1.8rem 2.5rem;
+	margin-right: 0;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	left: -2rem;
+
+	a {
+		color: $blue;}
+
+	img {
+		width: 8px;
+		height: 11px;
+	}
+}
+.github {
+	order: -1;	
+	flex: 1 0 30%;
+
+	img {
+		width: 60%;
+		background: $yellow;
+		padding: 1.5rem;
+		border-radius: 0.6rem;
+	}
+}
+

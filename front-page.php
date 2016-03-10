@@ -20,17 +20,23 @@
 		<?php if( $portfolioQuery -> have_posts()):  ?>
     		<?php while($portfolioQuery -> have_posts()): ?>
        			<?php $portfolioQuery -> the_post();?>
-         		<?php while(has_sub_field('project_item')): ?>
+         		<?php while(has_sub_field('project_item')): ?> 
+
 
     		<div class="portfolio-content">
     			<div class="wrapper portfolio-skew">
+        			<h4><?php the_sub_field('project_number') ?></h4>
     				<div class="portfolio-text">
-        				<h4><?php the_sub_field('project_number') ?></h4>
         				<h2><?php the_title(); ?></h2>
-						<?php the_sub_field('project_caption'); ?></p>
+						<p class="skills"><?php the_sub_field('project_caption'); ?></p>
 						<?php the_content(); ?>
-						<?php the_sub_field('project_button_live'); ?>
-						<?php  the_sub_field('project_button_github');?>
+						<div class="flex">
+							<div class="live"><a href="<?php the_sub_field('project_button_live'); ?>">View project</a> <img src="<?php bloginfo('template_directory')?>/images/arrow.png" alt=""></div>
+							<?php $logo = get_sub_field('project_logo_github') ?>
+							<div class="github">
+							<a href="<?php the_sub_field('project_button_github');?>"><img src="<?php echo $logo['sizes']['large'];?>"></a>
+							</div>
+						</div>
 					</div>        			
 					<div class="portfolio-item-image">
 						<?php $image = get_sub_field('project_image') ?>
