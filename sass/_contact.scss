@@ -7,6 +7,7 @@
 	display: flex;
 	flex-flow: row wrap;
 	padding: 4rem 0;
+	align-items: flex-start;
 }
 
 .form-text, .form-container {
@@ -16,6 +17,7 @@
 
 .form-text {
 	padding: 0 12rem;
+	position: relative;
 
 	h3 {
 		margin-top: 0;
@@ -23,14 +25,14 @@
 }
 .contact-flex {
 	position: relative;
-	padding: 13rem 0;
+	padding: 10rem 0 6rem;
 	a {
 		color: $yellow;
 	}
 	 	.line {
 		border-bottom: 0.6rem solid $white;
 		width: 8rem;
-		position: absolute;
+		// position: absolute;
 		top: 28rem;
 
 	}
@@ -58,6 +60,15 @@ form input[type=text] {
  .contact-flex form p {
 		margin: 0;
 		padding: 0;
+}
+div.wpcf7-mail-sent-ok {
+	border-radius: 0.6rem;
+	width: 80%;
+	border: 2px solid $yellow;
+	padding: 2rem;
+}
+.ajax-loader {
+	display: none;
 }
 
 input:-webkit-autofill, textarea:-webkit-autofill  {

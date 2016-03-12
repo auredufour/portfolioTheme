@@ -45,7 +45,6 @@ of writing our own link tags in the header. */
 
 function hackeryou_styles(){
 	wp_enqueue_style('style', get_stylesheet_uri() );
-
 	wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 }
 
@@ -58,7 +57,7 @@ function hackeryou_scripts() {
 
 	//Don't use WordPress' local copy of jquery, load our own version from a CDN instead
 	wp_deregister_script('jquery');
-  wp_enqueue_script(
+  	wp_enqueue_script(
   	'jquery',
   	"http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js",
   	false, //dependencies
@@ -67,9 +66,9 @@ function hackeryou_scripts() {
   );
 
   wp_enqueue_script(
-    'plugins', //handle
-    get_template_directory_uri() . '/js/plugins.js', //source
-    false, //dependencies
+    'parallax', //handle
+    get_template_directory_uri() . '/js/stellar.js-master/jquery.stellar.min.js', //source
+    array( 'jquery'),
     null, // version number
     true //load in footer
   );
@@ -77,7 +76,7 @@ function hackeryou_scripts() {
   wp_enqueue_script(
     'scripts', //handle
     get_template_directory_uri() . '/js/main.min.js', //source
-    array( 'jquery', 'plugins' ), //dependencies
+    array( 'jquery', 'parallax' ), //dependencies
     null, // version number
     true //load in footer
   );

@@ -1,11 +1,110 @@
 header {
 	background: $yellow;
 	margin: 0;
-	padding: 16.5rem 13rem;
+	padding: 17rem 20rem;
 	z-index: 99999;
 	position: relative;
 
 	a {
 		border-bottom: 2px solid $blue;
 	}
+// @keyframes fadeIn { 
+//   from { opacity: 0;
+//    } 
+// }
+
+.animate-flicker {
+    animation: fadeIn 5s infinite alternate;
+}
+}
+
+.animate img {
+	position: absolute;
+}
+
+.animate-flicker-one {
+	@keyframes fadeOutLego {
+	0%   {opacity: 1;}
+    50%  {opacity: 0;}
+    100% {opacity: 1;}
+}
+	animation: fadeOutLego 5s;
+	top: 10%;
+	left: 5%;
+}
+
+.animate-flicker-two {
+	@keyframes fadeIn {
+	0%   {opacity: 0;}
+    25%  {opacity: 1;}
+    50%  {opacity: 0.2;}
+    75%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+	animation: fadeIn 3s;
+	opacity:0;
+	top: 35%;
+	left: 30%;
+	transform: rotate(-15deg);
+}
+.animate-flicker-three {
+	@keyframes fadeOut {
+	0%   {opacity: 1;}
+    60%  {opacity: 0;}
+    100% {opacity: 1;}
+}
+	animation: fadeOut 4s;
+	animation-delay: 1s;
+	top: 20%;
+	right: 10%;
+}
+.animate-flicker-four {
+	@keyframes fadeIn {
+	0%   {opacity: 0;}
+    40%  {opacity: 0.8;}
+    100% {opacity: 0;}
+}
+	animation: fadeIn 3s;
+	opacity:0;
+	bottom: 10%;
+	left: 8%;
+}
+.animate-flicker-five {
+	@keyframes fadeIn {
+	0%   {opacity: 0;}
+    60%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+	animation: fadeIn 2s;
+	animation-delay: 1s;
+	opacity: 0;
+	top: 5%;
+	right: 35%;
+	transform: rotate(-55deg);
+}
+.animate-flicker-six{
+	@keyframes fadeOut {
+	0%   {opacity: 1;}
+	30%  {opacity: 0.5;}
+    100% {opacity: 1;}
+}
+	animation: fadeOut 4s;
+	animation-delay: 0.5s;
+	opacity: 1;
+	right: 40%;
+	bottom: 20%;
+	transform: rotate(-85deg);
+}
+.animate-flicker-seven {
+	@keyframes fadeIn {
+	0%   {opacity: 0;}
+	50%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+	animation: fadeIn 3s;
+	animation-delay: 1.5s;
+	opacity: 0;
+	bottom: 10%;
+	right: 15%;
+
 }

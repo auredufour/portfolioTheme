@@ -13,6 +13,7 @@
 
 	img {
 		margin: 2rem auto;
+		width: 50%;
 	}
 	
 	.line {
@@ -54,6 +55,10 @@
 			}
 		}
 	}
+}
+
+.active {
+	color: $yellow;
 }
 
 

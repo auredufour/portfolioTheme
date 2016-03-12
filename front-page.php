@@ -1,14 +1,23 @@
 <!-- Single page  -->
 
 	<?php get_header();  ?>
-<div class="flex-right">
 	<header>
 		<div class="wrapper">
     	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
       		<?php the_content(); ?>
     	<?php endwhile; // end the loop?>
+    	<div class="animate">
+    		<img class="animate-flicker-one" src=" <?php bloginfo('template_directory')?>/images/lego.svg" alt="">
+    		<img class="animate-flicker-two" src=" <?php bloginfo('template_directory')?>/images/lightbulb.svg" alt="">
+    		<img class="animate-flicker-three" src=" <?php bloginfo('template_directory')?>/images/polaroid.svg" alt="">
+    		<img class="animate-flicker-four" src=" <?php bloginfo('template_directory')?>/images/globe.svg" alt="">
+    		<img class="animate-flicker-five" src=" <?php bloginfo('template_directory')?>/images/tea.svg" alt="">
+    		<img class="animate-flicker-six" src=" <?php bloginfo('template_directory')?>/images/pen.svg" alt="">
+    		<img class="animate-flicker-seven" src=" <?php bloginfo('template_directory')?>/images/donut.svg" alt="">
     	</div>
 	</header>
+
+<div class="flex-right">
 
 	<section class="portfolio" id="work">
 		<?php $portfolioQuery = new WP_Query(array(
@@ -25,20 +34,22 @@
 
     		<div class="portfolio-content">
     			<div class="wrapper portfolio-skew">
-        			<h4><?php the_sub_field('project_number') ?></h4>
-    				<div class="portfolio-text">
-        				<h2><?php the_title(); ?></h2>
-						<p class="skills"><?php the_sub_field('project_caption'); ?></p>
-						<?php the_content(); ?>
-						<div class="flex">
-							<div class="live"><a href="<?php the_sub_field('project_button_live'); ?>">View project</a> <img src="<?php bloginfo('template_directory')?>/images/arrow.png" alt=""></div>
-							<?php $logo = get_sub_field('project_logo_github') ?>
+    				<div class="flex-text">
+        				<h4 data-stellar-ratio="0.85" ><?php the_sub_field('project_number') ?></h4>
+    					<div class="portfolio-text">
+        					<h2 data-stellar-ratio="0.5"><?php the_title(); ?></h2>
+							<p class="skills"><?php the_sub_field('project_caption'); ?></p>
+							<?php the_content(); ?>
+							<div class="flex">
+								<a class="button-live" href="<?php the_sub_field('project_button_live');  ?>" target:"_blank"><div class="live">View project <img src="<?php bloginfo('template_directory')?>/images/arrow.png" alt=""></div></a>
+								<?php $logo = get_sub_field('project_logo_github') ?>
 							<div class="github">
 							<a href="<?php the_sub_field('project_button_github');?>"><img src="<?php echo $logo['sizes']['large'];?>"></a>
 							</div>
 						</div>
-					</div>        			
-					<div class="portfolio-item-image">
+					</div>  
+					</div>      			
+					<div class="portfolio-item-image" >
 						<?php $image = get_sub_field('project_image') ?>
          				<img src=" <?php echo $image['sizes']['large'] ?>" alt="">
          			</div>
@@ -59,7 +70,7 @@
 		 			<?php the_sub_field('biography-description-part-1'); ?>
 		 			<?php the_sub_field('biography-description-part-2'); ?>
 		 		</div>
-		 		<div class="biography-quote">
+		 		<div class="biography-quote" data-stellar-ratio="1.3" >
 		 			<?php the_sub_field('biography-quote'); ?>
 		 			<div class="biography-background">
 		 				<span><?php the_sub_field('biography-quote-background');?></span>
@@ -77,7 +88,7 @@
 
 		<?php if( have_rows('form') ): ?>
 			<?php while ( have_rows('form') ) : the_row(); ?> 
-				<div class="form-text">
+				<div class="form-text" >
 		 			<h3><?php the_sub_field('form-title'); ?></h3>
 		 			<div class="line"></div>
 		 			<?php the_sub_field('form-text'); ?><a href="mailto:<?php the_sub_field('form-link-email'); ?>"><?php the_sub_field('form-link-email'); ?></a> 

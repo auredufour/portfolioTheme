@@ -4,6 +4,11 @@
 	background: $lightwhite;
 }
 
+.flex-text {
+	position: relative;
+}
+
+
 // Style on the main elements of the portfolio
 .portfolio-skew {
 	display: flex;
@@ -33,10 +38,11 @@
 }
 
 .portfolio-text {
-	flex: 1 0 30%;
+	flex: 1 0 35%;
 	position: relative;
 	height: 100%;
 	z-index: 999;
+	padding: 0 2rem;
 
 	p {
 		margin: 0;
@@ -89,7 +95,13 @@
 			margin-left: 10%;
 		}
 	}
+	.flex-text {
+		h4 {
+			left: 2rem;
+		}
+	}
 }
+
 
 .portfolio-content:nth-child(even) {
 	background: $lightgrey;
@@ -103,32 +115,43 @@
 	.portfolio-text {
 		order: 1;
 	}
+	.flex-text {
+		h4 {
+			left: 11rem;
+		}
+	}
 }
 // Style on the links GITHUB and LIVE
 .flex {
 	display: flex;
 }
 
-.live {
+.button-live {
 	display: flex;
 	flex: 1 0 60%;
-	justify-content: space-between;
-	align-items: center;
 	position: relative;
 	left: -2rem;
+	
+.live {
+	width: 100%;
+	display: flex;
+
+	padding: 1.5rem 2.3rem;
+	justify-content: space-between;
+	align-items: center;
 	margin-right: 0;
-	padding: 1.8rem 2.5rem;
 	border-radius: 0.6rem;
 	background: $yellow;
 
 	img {
-		width: 8px;
-		height: 11px;
-	}
+		width: 0.8rem;
+		height: 1.05rem;
+			}
+}
 }
 
 .github {
-	flex: 1 0 30%;
+	flex: 1 0 35%;
 	order: -1;	
 
 	img {
