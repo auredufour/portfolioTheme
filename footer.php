@@ -2,7 +2,8 @@
 <div class="flex-right">
   <div class="wrapper">
     <p>&copy; Aurelie Dufour <?php echo date('Y'); ?> made with <i class="fa fa-heart"></i> in Toronto</p>
-         <?php wp_nav_menu( array(
+    
+    <?php wp_nav_menu( array(
       'container' => false,
       'theme_location' => 'secondary'
     )); ?>

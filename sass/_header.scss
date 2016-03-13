@@ -1,20 +1,26 @@
 header {
 	background: $yellow;
 	margin: 0;
-	padding: 17rem 20rem;
+	padding: 35.5rem;
 	z-index: 99999;
 	position: relative;
-	height: 100vh;
 
-	@media (max-width: 1050px) {
-		padding: 13rem 14rem;
+	@media (max-width: 1250px) {
+		padding: 31rem 0;
 	}
-	@media (max-width: 960px) {
-		padding: 12rem 14rem;
-	}	
-	@media (max-width: 728px) {
-		padding: 10rem 14rem;
+
+.header-position {
+	width: 72%;
+	position: absolute;
+	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%,-50%);
+  	z-index: 99999;
+  	@media (max-width: 850px) {
+		width: 80%;
+		padding: 2rem 0;
 	}
+}
 
 
 	a {
@@ -49,6 +55,11 @@ header {
 		top: 35%;
 		left: 30%;
 		transform: rotate(-15deg);
+  	@media (max-width: 900px) {
+  		top: 22%;
+  		left: 25%;
+  	}
+
 		
 		@keyframes fadeIn {
 			0%   {opacity: 0;}
@@ -120,6 +131,10 @@ header {
 		opacity: 0;
 		bottom: 10%;
 		right: 15%;
+  	@media (max-width: 900px) {
+  		bottom: 8%;
+  		right: 10%;
+  	}
 
 		@keyframes fadeIn {
 			0%   {opacity: 0;}

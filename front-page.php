@@ -3,9 +3,11 @@
 	<?php get_header();  ?>
 	<header>
 		<div class="wrapper">
+		<div class="header-position">
     	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
       		<?php the_content(); ?>
     	<?php endwhile; // end the loop?>
+    	</div>
     	<div class="animate">
     		<img class="animate-flicker-one" src=" <?php bloginfo('template_directory')?>/images/lego.svg" alt="">
     		<img class="animate-flicker-two" src=" <?php bloginfo('template_directory')?>/images/lightbulb.svg" alt="">
@@ -35,9 +37,9 @@
     		<div class="portfolio-content">
     			<div class="wrapper portfolio-skew">
     				<div class="flex-text">
-        				<h4 data-stellar-ratio="0.85" ><?php the_sub_field('project_number') ?></h4>
+        				<h4 data-stellar-ratio="0.85"><?php the_sub_field('project_number') ?></h4>
     					<div class="portfolio-text">
-        					<h2 data-stellar-ratio="0.5"><?php the_title(); ?></h2>
+        					<h2><?php the_title(); ?></h2>
 							<p class="skills"><?php the_sub_field('project_caption'); ?></p>
 							<?php the_content(); ?>
 							<div class="flex">

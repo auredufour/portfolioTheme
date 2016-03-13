@@ -17,16 +17,31 @@ a {
 
 header {
 	h1 {
-		font-size: 4.3rem;
-		line-height: 6rem;
+		font-size: 4.5rem;
+		line-height: 6.5rem;
 		color: $blue;
 		font-family: "Montserrat";
 		position: relative;
 		z-index: 9999;
+	
+	@media (max-width: 1050px) {
+		font-size: 4rem;
+		line-height: 5.8rem;
 	}
 	@media (max-width: 960px) {
-		font-size: 3.8rem;
+		font-size: 3.6rem;
+		line-height: 5.4rem;
 	}
+	@media (max-width: 860px){
+		font-size: 3.4rem;
+		line-height: 5.2rem;
+	}
+
+	@media (max-width: 620px){
+		font-size: 3.2rem;
+	}
+	}
+
 	a {
 		color: $blue;
 	}
@@ -48,7 +63,6 @@ header {
 	color: $white;
 	font-size: 28rem;
 	text-align: center;
-	top: 2rem;
 	line-height: 0;
 	margin: 0;
 	padding: 0;

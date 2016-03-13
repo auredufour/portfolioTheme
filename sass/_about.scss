@@ -1,8 +1,7 @@
 .about {
 	background: $yellow;
 	position: relative;
-	z-index: 99999;
-	
+	z-index: 9997;
 }
 
 .about-flex {
@@ -10,7 +9,16 @@
 	// top: -13rem;
 	padding: 10rem 10rem 16rem;
 	display: flex;
-
+	flex-flow: row wrap;
+@media (max-width: 1150px) {
+	padding: 10rem 8rem 16rem;
+		}
+@media (max-width: 850px) {
+	padding: 10rem 6rem 16rem;
+}
+		@media (max-width: 750px) {
+		flex-flow: column;
+	}
 
 	.biography-quote {
 		flex: 1 0 28%;
@@ -23,6 +31,19 @@
 		order: -1;
 		left: -13rem;
 		height: 100%;
+		@media (max-width: 1150px){
+			flex: 1 0 35%;
+		}
+
+		@media (max-width: 850px) {
+			left: -4.5rem;
+		}	
+		@media (max-width: 750px) {
+			width: 60%;
+			left: 0rem;
+			order: 1;
+			top: -4rem;
+	}
 
 		p {
 			z-index: 200;
@@ -66,5 +87,14 @@
 		position: relative;
 		left: 0;
 
+		@media (max-width: 1150px) {
+			flex: 1 0 65%;
+			margin: 0.5rem auto;
+		}
+		@media (max-width: 750px) {
+			flex: 1 0 70%;
+			margin-left: 6rem;
+		}
+		
 	}
 }

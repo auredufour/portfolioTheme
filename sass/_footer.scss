@@ -5,10 +5,50 @@ footer {
 
 	p {
 		margin: 0;
-		padding: 2rem;
+		padding: 3rem;
 		color: $lightgrey;
+
+	@media (max-width: 850px){
+		padding: 2rem 3rem 0rem;
+	}
 	}
 	#menu-social-media-links-1 {
 		display: none;
+
+		li a {
+			color: $lightwhite;
+			padding: 2rem;
+			transition: 0.5s;
+		 &:hover {
+		 	color: $yellow;
+		}
+		i {
+			font-size: 2rem;
+		}
+		}
+
+
+	@media (max-width: 850px) {
+		display: flex;
+		margin: 0 auto;
+		padding: 2rem;
+		width: 30%;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		color: $lightwhite;
+	}
+	@media (max-width: 800px){
+		width: 35%;
+	}
+	@media (max-width: 700px){
+		width: 40%
+	}
+	@media (max-width: 580px){
+		width: 50%;
+	}
+	@media (max-width: 465px){
+		width: 60%;
+	}
+
 	}
 }

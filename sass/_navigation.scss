@@ -53,6 +53,17 @@
 		@media (max-width: 800px) {
 			width: 60%;
 		}
+		@media (max-width: 600px) {
+			width: 80%;
+			margin: 0.5rem auto;
+
+		}	
+		@media (max-width: 500px) {
+			width: 90%;
+			margin: 0.5rem auto;
+			padding:0;
+
+		}		
 	}
 
 	.line {

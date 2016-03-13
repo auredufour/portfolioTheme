@@ -1,11 +1,14 @@
 $(function(){
 
 	console.log("It's working");
-	$(window).stellar({
-		hideDistantElements: false,
-		// horizontalOffset: 40,
-  // 		verticalOffset: 80
-	});
+
+	var $window = $(window);
+	if( ($window.width() > 750) ){
+        $(window).stellar({
+			hideDistantElements: false,
+		});
+    };
+
 	$('#menu-work, #menu-item-14 a').on('click', function (){
 		$('html, body').animate ({
 			scrollTop: $("#work").offset().top
