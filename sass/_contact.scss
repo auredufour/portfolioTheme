@@ -26,8 +26,14 @@
 .contact-flex {
 	position: relative;
 	padding: 10rem 0 6rem;
+
 	a {
 		color: $yellow;
+		&:hover {
+			color: $lightwhite;
+			padding-bottom: 0.5rem;
+			border-bottom: 1px solid $yellow;
+		}
 	}
 	 	.line {
 		border-bottom: 0.6rem solid $white;
@@ -51,6 +57,11 @@ form input, textarea {
 form input[type=submit] {
 	color:$blue;
 	background: $yellow;
+	transition: 0.5s;
+
+	&:hover {
+		background: $lightwhite;
+	}
 }
 
 form input[type=text] {
@@ -61,20 +72,25 @@ form input[type=text] {
 		margin: 0;
 		padding: 0;
 }
-div.wpcf7-mail-sent-ok {
+div.wpcf7-mail-sent-ok, div.wpcf7-response-output {
 	border-radius: 0.6rem;
 	width: 80%;
 	border: 2px solid $yellow;
 	padding: 2rem;
 }
+span .wpcf7-not-valid-tip {
+	color: $yellow;
+}
+
 .ajax-loader {
 	display: none;
 }
+
 
 input:-webkit-autofill, textarea:-webkit-autofill  {
 		-webkit-box-shadow: 0 0 0px 1000px $white inset;
 		border: 1px solid $white;
 	}
-	textarea, input, input:focus, input:active, ::-webkit-input-placeholder, a {
+textarea, input, input:focus, input:active, ::-webkit-input-placeholder, a {
 		outline: none;
-	}
+}

@@ -41,10 +41,10 @@
 							<p class="skills"><?php the_sub_field('project_caption'); ?></p>
 							<?php the_content(); ?>
 							<div class="flex">
-								<a class="button-live" href="<?php the_sub_field('project_button_live');  ?>" target:"_blank"><div class="live">View project <img src="<?php bloginfo('template_directory')?>/images/arrow.png" alt=""></div></a>
+								<a class="button-live" href="<?php the_sub_field('project_button_live');  ?>" target="_blank"><div class="live">View project <img src="<?php bloginfo('template_directory')?>/images/arrow.png" alt=""></div></a>
 								<?php $logo = get_sub_field('project_logo_github') ?>
 							<div class="github">
-							<a href="<?php the_sub_field('project_button_github');?>"><img src="<?php echo $logo['sizes']['large'];?>"></a>
+							<a href="<?php the_sub_field('project_button_github');?>" target="_blank" ><img src="<?php echo $logo['sizes']['large'];?>"></a>
 							</div>
 						</div>
 					</div>  

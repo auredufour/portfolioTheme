@@ -1,8 +1,19 @@
-.flex-left{
+.flex-left {
 	background: $blue;
 	position: relative;
 	text-align: center;
 	padding: 4rem 0;
+
+	@media (max-width: 1000px) {
+		display: flex;
+		flex-flow: row wrap;
+		padding: 1.5rem 2rem;
+		align-items: center;
+	}
+
+	@media (max-width: 400px) {
+		text-align: center;
+	}
 
 	.menu {
 		margin: 0;
@@ -11,18 +22,50 @@
 		flex-flow: wrap;
 	}
 
+	a {
+		padding: 0;
+		margin: 0;
+
+		@media (max-width: 1000px) {
+			flex: 1 0 20%;
+			margin: 0;
+			padding: 1rem;
+		}
+
+		@media (max-width: 350px) {
+			width: 100%;
+			padding:0;
+		}
+	}
+
 	img {
 		margin: 2rem auto;
 		width: 50%;
+		padding: 0;
+
+		@media (max-width: 1000px) {
+			width: 45%;
+			padding: 1rem;
+		}
+		@media (max-width: 900px) {
+			width: 50%;
+		}
+		@media (max-width: 800px) {
+			width: 60%;
+		}
 	}
-	
+
 	.line {
-		border-bottom: 2px solid $white;
 		width: 10%;
 		position: relative;
 		top: 12rem;
 		left: 50%;
 		transform: translateX(-50%);
+		border-bottom: 2px solid $white;
+
+		@media (max-width: 1000px) {
+			display: none;
+		}
 	}
 
 	.line:nth-child(2){
@@ -31,15 +74,57 @@
 
 	#menu-menu-1 {
 		flex-flow: column;
+
+		@media (max-width: 1000px) {
+			flex: 1 0 calc(70% - 30%);
+			margin: 0 15%;
+			display: flex;
+			flex-flow: row;
+			justify-content: space-between;
+			align-items: flex-center;
+		}
+
+		@media (max-width: 750px){
+			flex: 1 0 calc(70% - 20%);
+			margin: 0 10%;
+		}
+
+		@media (max-width: 600px){
+			flex: 1 0 calc(70% - 4%);
+			margin: 0 2%;
+		}
+
+		@media (max-width: 500px) {
+			flex-flow: column;
+		}
+
+		@media (max-width: 400px) {
+			flex: 1 0 40%;
+		}
+
 		li {
-			padding: 4rem;
+			padding: 4rem 2rem;
+
+			@media (max-width: 1000px) {
+				padding: 0;
+			}
+
+			@media (max-width: 500px) {
+				padding: 1rem;
+			}
 		}
 
 		a {
-				padding: 10px;
-				color: $white;
+			padding: 1rem;
+			color: $white;
+			transition: 0.6s ease-in;
+
+		&:hover {
+			color: $yellow;
 			}
+		}
 	}
+
 	#menu-social-media-links {
 		position: absolute;
 		margin: 2rem;
@@ -47,18 +132,24 @@
 		right: 0;
 		left: 0;
 
+		@media (max-width: 1000px) {
+			display: none;
+		}
+
 		li {
 		flex: 1 0 33.3%;
+
 			a {
 				padding: 10px;
 				color: $grey;
+				transition: 0.5s;
+			}
+			
+			a:hover {
+				color: $yellow;
 			}
 		}
 	}
-}
-
-.active {
-	color: $yellow;
 }
 
 

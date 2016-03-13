@@ -58,12 +58,38 @@ body {
 	top: 0;
 	bottom: 0;
 	left: 0;
+
+    @media (max-width: 1000px) {
+    	width: 20%;
+    	position: fixed;
+
+    }
+
+    @media (max-width: 1000px) {
+    	width: 100%;
+    	top: 0;
+    	right: 0;
+    	bottom: 80%;
+    	left: 0;
+    	z-index: 9998;
+	}
+	
+	@media (max-width: 500px) {
+		bottom: 75%;
+	}
 }
+
 
 .flex-right {
 	width: 85%;
 	margin-left: 15%;
+
+    @media (max-width: 1000px) {
+		width: 100%;
+		margin: 0;
+	}
 }
+
  ul {
  	list-style: none;
  	padding-left: 0;

@@ -3,9 +3,12 @@ footer {
 	margin: 0;
 	text-align: center;
 
-	p{
+	p {
 		margin: 0;
 		padding: 2rem;
 		color: $lightgrey;
+	}
+	#menu-social-media-links-1 {
+		display: none;
 	}
 }
