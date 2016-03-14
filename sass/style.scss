@@ -62,7 +62,6 @@ body {
     @media (max-width: 1000px) {
     	width: 20%;
     	position: fixed;
-
     }
 
     @media (max-width: 1000px) {
@@ -75,7 +74,10 @@ body {
 	}
 	
 	@media (max-width: 500px) {
-		bottom: 75%;
+		bottom: 70%;
+	}
+	@media (max-width: 400px){
+		bottom: 65%;
 	}
 }
 

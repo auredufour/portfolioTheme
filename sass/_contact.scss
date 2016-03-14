@@ -3,6 +3,7 @@
 	color: $lightgrey;
 	position: relative;
 }
+
 .contact-flex {
 	display: flex;
 	flex-flow: row wrap;
@@ -10,17 +11,18 @@
 	align-items: flex-start;
 
 	@media (max-width: 850px) {
-		flex-flow: column;
+		display: block;
+		margin: 0 auto;
 	}
 }
 
 .form-text, .form-container {
 	flex: 1 0 50%;
 	padding: 2rem;
-	@media (max-width: 850px) {
-		margin: 0 auto;
-	}
 
+	@media (max-width: 850px) {
+		display: block;
+	}
 }
 
 .form-container {
@@ -31,8 +33,11 @@
 		padding: 2rem;
 	@media (max-width: 850px) {
 		padding: 0;
+		width: 60%;
+		margin: 0 auto;
 	}
 	@media (max-width: 540px) {
+		display: block;
 		width: 100%;
 		padding: 0 8rem;
 	}
@@ -52,8 +57,10 @@
 		padding: 0 8rem;
 	}
 	@media (max-width: 850px) {
+		display: block;
 		width: 50%;
 		padding: 0;
+		margin: 0 auto;
 	}
 	@media (max-width: 800px) {
 		width: 52%;

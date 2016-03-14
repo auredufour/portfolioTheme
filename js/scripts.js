@@ -7,6 +7,7 @@ $(function(){
         $(window).stellar({
 			hideDistantElements: false,
 		});
+		console.log( "it works");
     };
 
 	$('#menu-work, #menu-item-14 a').on('click', function (){
