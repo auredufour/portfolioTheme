@@ -18,7 +18,6 @@ $lightgrey: #EFEEE9;
 $lightwhite: #F6F5EF;
 $white: #fff;
 
-
 @import 'normalize';
 @import 'typography';
 @import 'navigation';
@@ -35,11 +34,6 @@ Default Styling
 
 html {
 	font-size: 62.5%;
-}
-
-img {
-	max-width: 100%;
-	display: block;
 }
 
 body {
@@ -76,11 +70,11 @@ body {
 	@media (max-width: 500px) {
 		bottom: 70%;
 	}
+
 	@media (max-width: 400px){
 		bottom: 65%;
 	}
 }
-
 
 .flex-right {
 	width: 85%;
@@ -100,6 +94,11 @@ body {
  a {
  	text-decoration: none;
  }
+ 
+ img {
+	max-width: 100%;
+	display: block;
+}
 
 
 

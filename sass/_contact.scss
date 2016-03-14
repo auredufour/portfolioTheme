@@ -1,14 +1,15 @@
+// CONTACT FORM AND TEXT
 .contact {
 	background: $blue;
-	color: $lightgrey;
 	position: relative;
 }
 
+// GENERAL STYLING
 .contact-flex {
 	display: flex;
 	flex-flow: row wrap;
-	padding: 4rem 0;
 	align-items: flex-start;
+	padding: 4rem 0;
 
 	@media (max-width: 850px) {
 		display: block;
@@ -29,38 +30,42 @@
 	@media (max-width: 540px) {
 		padding: 0;
 	}
+
 	form {
 		padding: 2rem;
-	@media (max-width: 850px) {
-		padding: 0;
-		width: 60%;
-		margin: 0 auto;
-	}
-	@media (max-width: 540px) {
-		display: block;
-		width: 100%;
-		padding: 0 8rem;
-	}
+		
+		@media (max-width: 850px) {
+			padding: 0;
+			width: 60%;
+			margin: 0 auto;
+		}
 
-}
+		@media (max-width: 540px) {
+			display: block;
+			width: 100%;
+			padding: 0 8rem;
+		}
+	}
 
 	.wpcf7 {
 		width: 100%;
 	}
 }
 
+// STYLING OF THE TEXT
 .form-text {
-	padding: 0 12rem;
 	position: relative;
+	padding: 0 12rem;
 
 	@media (max-width: 1100px) {
 		padding: 0 8rem;
 	}
+
 	@media (max-width: 850px) {
 		display: block;
 		width: 50%;
-		padding: 0;
 		margin: 0 auto;
+		padding: 0;
 	}
 	@media (max-width: 800px) {
 		width: 52%;
@@ -93,29 +98,33 @@
 
 	a {
 		color: $yellow;
+
 		&:hover {
-			color: $lightwhite;
 			padding-bottom: 0.5rem;
+			color: $lightwhite;
 			border-bottom: 1px solid $yellow;
 		}
 	}
-	 	.line {
-		border-bottom: 0.6rem solid $white;
-		width: 8rem;
-		// position: absolute;
-		top: 28rem;
 
+	.line {
+		width: 8rem;
+		top: 28rem;
+		border-bottom: 0.6rem solid $white;
 	}
+
 	p {
 		padding: 2rem 0;
 	}
 }
+
+// STYLING OF THE FORM
+// Remove the default wpcf7 style
 form input, textarea {
 	width: 100%;
-	padding: 1.5rem;
 	margin: 1.5rem 0;
-	border-radius: 0.6rem;
+	padding: 1.5rem;
 	border: none;
+	border-radius: 0.6rem;
 	background: $lightgrey;
 }
 
@@ -124,10 +133,10 @@ form input[type=submit] {
 	color:$blue;
 	background: $yellow;
 	transition: 0.5s;
+
 	@media (max-width: 450px) {
 		width: 80%;
 	}
-
 
 	&:hover {
 		background: $lightwhite;
@@ -138,28 +147,32 @@ form input[type=text] {
 	margin-top: 0;
 }
 
- .contact-flex form p {
-		margin: 0;
-		padding: 0;
+.contact-flex form p {
+	margin: 0;
+	padding: 0;
 }
+
 div.wpcf7-mail-sent-ok, div.wpcf7-response-output {
 	border-radius: 0.6rem;
 	width: 80%;
 	border: 2px solid $yellow;
 	padding: 2rem;
 }
+
 span .wpcf7-not-valid-tip {
 	color: $yellow;
 }
 
+//  Remove the animation when the email is send.
 form .ajax-loader {
 	display: none;
 }
 
 input:-webkit-autofill, textarea:-webkit-autofill  {
-		-webkit-box-shadow: 0 0 0px 1000px $white inset;
-		border: 1px solid $white;
-	}
+	-webkit-box-shadow: 0 0 0px 1000px $white inset;
+	border: 1px solid $white;
+}
+
 textarea, input, input:focus, input:active, ::-webkit-input-placeholder, a {
 		outline: none;
 }

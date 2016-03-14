@@ -1,68 +1,59 @@
+// GENERAL STYLING
+
 body {
 	font-size: 1.6rem;
-@media (max-width:400px){
-	font-size: 1.4rem;
-}
-}
 
-.flex-left {
-	color: $white;
-	font-size: 1.6rem;
-
-#menu-social-media-links {
-	font-size: 2.2rem;
+	@media (max-width:400px){
+		font-size: 1.4rem;
 	}
 }
-a {
-	color: $blue
-}
 
-
-header {
-	h1 {
-		font-size: 4.5rem;
-		line-height: 6.5rem;
-		color: $blue;
-		font-family: "Montserrat";
-		position: relative;
-		z-index: 9999;
+h1 {
+	font-family: "Montserrat";
+	font-size: 4.5rem;
+	line-height: 6.5rem;
+	color: $blue;
 	
 	@media (max-width: 1050px) {
 		font-size: 4rem;
 		line-height: 5.8rem;
 	}
+
 	@media (max-width: 960px) {
 		font-size: 3.6rem;
 		line-height: 5.4rem;
 	}
+
 	@media (max-width: 860px){
 		font-size: 3.4rem;
 		line-height: 5.2rem;
 	}
+
 	@media (max-width: 620px){
 		font-size: 3.2rem;
 	}
+
 	@media (max-width: 400px){
 		font-size: 2.5rem;
 	}
-	}
-
-	a {
-		color: $blue;
-	}
-}
-.skills {
-	font-size: 2rem;
 }
 
-.contact {
-	h3 {
-		font-family: "Playfair Display";
-		font-size: 4.5rem;
+h2 {
+	font-size: 3rem;
+	margin-top: 1rem;
+
+}
+
+h3 {
+	font-family: "Playfair Display";
+	font-size: 4.5rem;
+
+	@media (max-width: 400px){
+		font-size: 4rem;
 	}
 }
 
- h4 {	
+h4 {	
  	position: absolute;
  	font-family: "Playfair Display";
 	color: $white;
@@ -72,48 +63,67 @@ header {
 	margin: 0;
 	padding: 0;
 
-		@media (max-width: 1200px) {
-			font-size: 25rem;
-		}
-		@media (max-width: 1200px) {
-			font-size: 22rem;
-		}
+	@media (max-width: 1200px) {
+		font-size: 25rem;
+	}
+	@media (max-width: 1200px) {
+		font-size: 22rem;
+	}
 }
-
-
-.portfolio-text {
-h2 {
-	font-size: 3rem;
-	margin-top: 1rem;
-
-}
-p {
-	line-height: 2.8rem;
-}
-}
- .skills{
-	font-weight: 700;
-	color: $bluefooter;
- }
-
-
-/* paragraphs */
 
 p {
 	line-height: 1.5;
 }
 
-/*lists*/
-
 ul li, ol li {
 	padding: 3px;
 }
 
-/*PRE*/
-
-pre {
-	background: #F7F7F7;
-	padding: 10px;
-	border-radius: 4px;
-	border: 1px solid #ccc;
+a {
+	color: $blue
 }
+
+// STYLING PER AREA
+.flex-left {
+	font-size: 1.6rem;
+	color: $white;
+
+	#menu-social-media-links {
+		font-size: 2.2rem;
+	}
+}
+
+.biography-quote {
+	color: $white;
+
+	p {
+		line-height: 3rem;
+	}
+}
+
+.biography-background span {
+	font-family: "Playfair Display";
+	font-size: 40rem;
+	line-height: 0;
+	color: $bluefooter;
+}
+
+.contact {
+	color: $lightgrey;
+}
+
+.skills {
+	font-size: 2rem;
+	font-weight: 700;
+	color: $bluefooter;
+}
+
+footer #menu-social-media-links-1 i{
+	font-size: 2rem;
+}
+
+.portfolio-text p {
+	line-height: 2.8rem;
+}
+
+

@@ -11,7 +11,7 @@
 .flex-text {
 	position: relative;
 }
-
+// GENERAL STYLE
 // Style on the main elements of the portfolio
 .portfolio-skew {
 	display: flex;
@@ -32,9 +32,9 @@
 .portfolio-content {
 	margin:0;
 	padding: 8rem 10rem;
+	position: relative;
 	transform: skewY(-10deg);
 	z-index: 0;
-	position: relative;
 
 	@media (max-width: 1150px) {
 		padding: 8rem 6rem;
@@ -55,10 +55,9 @@
 		@media (max-width: 400px){
 		display: block;
 	}
-
 }
 
-.portfolio-item-image{
+.portfolio-item-image {
 	flex: 1 0 58%;
 	position: relative;
 	bottom: 0;
@@ -66,6 +65,7 @@
 	@media (max-width: 1200px) {
 		flex: 1 0 50%;
 	}
+
 	@media (max-width: 400px){
 		display: block;
 	}
@@ -79,6 +79,7 @@
 		width: 80%;
 		margin: 0 auto;
 	}
+
 	@media (max-width: 750px){
 		padding: 2rem 0;
 	}
@@ -88,16 +89,16 @@
 .portfolio-text {
 	flex: 1 0 42%;
 	position: relative;
-	height: 100%;
-	z-index: 999;
 	padding: 0 3rem;
+	z-index: 999;
 
 	@media (max-width: 850px) {
 		width: 80%;
 		margin: 0 auto;
 		padding: 2rem 0;
 	}
-		@media (max-width: 400px){
+
+	@media (max-width: 400px){
 		display: block;
 	}
 
@@ -114,15 +115,19 @@
 	@media (max-width: 1150px) {
 		padding: 10rem 6rem 8rem;
 	}
+
 	@media (max-width: 1000px){
 		padding: 18rem 6rem 8rem;
 	}
+
 	@media (max-width: 610px){
 		padding: 18rem 4rem 8rem;
 	}
+
 	@media (max-width: 510px){
 		padding: 8rem 2rem 10rem;
 	}
+
 	.portfolio-skew {
 		top: 8rem;
 	}
@@ -130,12 +135,15 @@
 
 .portfolio-content:nth-child(2){
 	padding: 14rem 10rem;
+
 	@media (max-width: 1150px) {
 		padding: 14rem 6rem;
 	}
+
 	@media (max-width: 610px){
 		padding: 14rem 4rem;
 	}
+
 	@media (max-width: 510px){
 		padding: 8rem 2rem 10rem;
 	}
@@ -149,7 +157,6 @@
 	padding-bottom: 14rem;
 	z-index: 999;
 
-
 	.portfolio-skew {
 		top: 3rem;
 	}
@@ -157,12 +164,15 @@
 
 .portfolio-content:nth-child(5){
 	padding: 10rem;
+
 	@media (max-width: 1150px) {
 		padding: 8rem 6rem 10rem;
 	}
+
 	@media (max-width: 610px){
 		padding: 8rem 4rem 10rem;
 	}
+
 	@media (max-width: 510px){
 		padding: 8rem 2rem 10rem;
 	}
@@ -171,26 +181,31 @@
 		bottom: 2rem;
 	}
 }
+
 // Style on multiple elements 
 .portfolio-content:nth-child(odd){
-	background: $lightwhite;
 	position: relative;
+	background: $lightwhite;
 	z-index: 999;
 
 	.portfolio-item-image {
 		position: relative;
-
-		img {
-			margin-left: 10%;
+	}
+	
+	img {
+		margin-left: 10%;
+		
 		@media (max-width: 850px) {
 			margin: 0 auto;
 		}
-		}
 	}
+
 	.flex-text {
+
 		h4 {
 			left: 2rem;
 		}
+
 		@media (max-width: 850px){
 			left: 0;
 		}
@@ -198,49 +213,55 @@
 }
 
 .portfolio-content:nth-child(even) {
-	background: $lightgrey;
 	position: relative;
+	background: $lightgrey;
 	z-index: 998;
 
 	.portfolio-item-image {
 		order: -1;
-	@media (max-width: 850px) {
-		order: 1;
-	}
+
+		@media (max-width: 840px) {
+			order: 1;
+		}
 	}
 
 	.portfolio-text {
 		order: 1;
-			@media (max-width: 850px) {
-		order: -1;
+
+		@media (max-width: 840px) {
+			order: -1;
+		}
 	}
-	}
-	.flex-text {
-		h4 {
-			left: 11rem;
+
+	h4 {
+		left: 11rem;
 
 		@media (max-width: 850px){
 			left: 0;
 		}
-		}
 	}
 }
+
 // Style on the links GITHUB and LIVE
 .flex {
 	display: flex;
+	flex: row wrap;
 	width: 75%;
 	padding-top: 1.5rem; 
-	flex: row wrap;
+
 	@media (max-width: 850px){
 		width: 50%;
 		padding-bottom: 3rem;
 	}
+
 	@media (max-width: 760px){
 		width: 60%;
 	}
+
 	@media (max-width: 610px){
 		width: 70%;
 	}
+
 	@media (max-width: 450px){
 		width: 80%;
 	}
@@ -258,13 +279,13 @@
 	.live {
 		width: 100%;
 		display: flex;
-		padding: 1.5rem 2.3rem;
 		justify-content: space-between;
 		align-items: center;
+		padding: 1.5rem 2.3rem;
 		border-radius: 0.6rem;
 		background: $yellow;
-		transition: 0.3s;
 		border: 2px solid transparent;
+		transition: 0.3s;
 
 		@media (max-width: 900px){
 			padding: 1.5rem;
@@ -284,8 +305,8 @@
 
 .github {
 	flex: 1 0 calc(20% + 1.5rem);
-	order: -1;
 	margin-right: 1.5rem;
+	order: -1;
 
 	@media (max-width: 1000px){
 		flex: 1 0 30%;
@@ -301,11 +322,11 @@
 
 		@media (max-width: 1000px){
 			width: 80%;
-	}
+		}
 
-	&:hover {
-		background: $lightwhite;
-		border: 2px solid $blue;
+		&:hover {
+			background: $lightwhite;
+			border: 2px solid $blue;
 		}
 	}
 }

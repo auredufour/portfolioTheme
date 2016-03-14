@@ -1,7 +1,7 @@
 $(function(){
 
 	console.log("It's working");
-
+// Stellar plugin
 	var $window = $(window);
 	if( ($window.width() > 750) ){
         $(window).stellar({
@@ -9,6 +9,8 @@ $(function(){
 		});
 		console.log( "it works");
     };
+    
+//Smoothscroll
 
 	$('#menu-work, #menu-item-14 a').on('click', function (){
 		$('html, body').animate ({

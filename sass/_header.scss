@@ -1,13 +1,16 @@
 header {
-	background: $yellow;
 	margin: 0;
 	padding: 35.5rem;
-	z-index: 99999;
 	position: relative;
+	height: 100vh;
+	z-index: 99999;
+	background: $yellow;
 
-	@media (max-width: 1250px) {
-		padding: 31rem 0;
+	h1 {
+		position: relative;
+		z-index: 9999;
 	}
+}
 
 .header-position {
 	width: 72%;
@@ -16,130 +19,136 @@ header {
   	left: 50%;
   	transform: translate(-50%,-50%);
   	z-index: 99999;
+
   	@media (max-width: 850px) {
 		width: 80%;
 		padding: 2rem 0;
 	}
-}
-
 
 	a {
 		border-bottom: 2px solid $blue;
 		transition: 0.6s;
+
 		&:hover {
-			// color: $lightgrey;
 			border-bottom: 2px solid transparent;
-
 		}
 	}
+}
 
-	.animate img {
-		position: absolute;
+// HEADER ANIMATION
+.animate img {
+	position: absolute;
+}
+// Lego --
+.animate-flicker-one {
+	top: 10%;
+	left: 5%;
+	animation: fadeOutLego 6s;
+
+	@keyframes fadeOutLego {
+		0%   {opacity: 1;}
+	    50%  {opacity: 0;}
+	    100% {opacity: 1;}
+	}
+}
+// Lightbulb
+.animate-flicker-two {
+	top: 35%;
+	left: 30%;
+	opacity:0;
+	transform: rotate(-15deg);
+	animation: fadeIn 4s;
+
+	@media (max-width: 900px) {
+		top: 22%;
+		left: 25%;
 	}
 
-	.animate-flicker-one {
-		animation: fadeOutLego 6s;
-		top: 10%;
-		left: 5%;
+	@keyframes fadeIn {
+		0%   {opacity: 0;}
+   		25%  {opacity: 1;}
+    	50%  {opacity: 0.2;}
+    	75%  {opacity: 1;}
+    	100% {opacity: 0;}
+	}	
+}
 
-		@keyframes fadeOutLego {
-			0%   {opacity: 1;}
-		    50%  {opacity: 0;}
-		    100% {opacity: 1;}
-		}
+// Polaroid
+.animate-flicker-three {
+	top: 20%;
+	right: 10%;
+	animation: fadeOut 6s;
+	animation-delay: 2s;
+
+	@keyframes fadeOut {
+		0%   {opacity: 1;}
+   		60%  {opacity: 0;}
+   		100% {opacity: 1;}
 	}
+}
 
-	.animate-flicker-two {
-		animation: fadeIn 4s;
-		opacity:0;
-		top: 35%;
-		left: 30%;
-		transform: rotate(-15deg);
-  	@media (max-width: 900px) {
-  		top: 22%;
-  		left: 25%;
-  	}
+// Globe
+.animate-flicker-four {
+	bottom: 10%;
+	left: 8%;
+	opacity:0;
+	animation: fadeIn 4s;
 
-		
-		@keyframes fadeIn {
-			0%   {opacity: 0;}
-	   		25%  {opacity: 1;}
-	    	50%  {opacity: 0.2;}
-	    	75%  {opacity: 1;}
-	    	100% {opacity: 0;}
-		}	
+	@keyframes fadeIn {
+		0%   {opacity: 0;}
+    	40%  {opacity: 0.8;}
+    	100% {opacity: 0;}
 	}
+}
 
-	.animate-flicker-three {
-		animation: fadeOut 6s;
-		animation-delay: 2s;
-		top: 20%;
+// Tea pot
+.animate-flicker-five {
+	top: 5%;
+	right: 35%;
+	opacity: 0;
+	transform: rotate(-55deg);
+	animation: fadeIn 5s;
+	animation-delay: 2s;
+
+	@keyframes fadeIn {
+		0%   {opacity: 0;}
+    	60%  {opacity: 1;}
+    	100% {opacity: 0;}
+	}
+}
+
+// Pen
+.animate-flicker-six{
+	right: 40%;
+	bottom: 20%;
+	opacity: 1;
+	transform: rotate(-85deg);
+	animation: fadeOut 6s;
+	animation-delay: 1.5s;
+
+	@keyframes fadeOut {
+		0%   {opacity: 1;}
+		30%  {opacity: 0.5;}
+    	100% {opacity: 1;}
+	}
+}
+
+// Donut
+.animate-flicker-seven {
+	bottom: 10%;
+	right: 15%;
+	opacity: 0;
+	animation: fadeIn 6s;
+	animation-delay: 2s;
+
+	@media (max-width: 900px) {
+		bottom: 8%;
 		right: 10%;
-
-		@keyframes fadeOut {
-			0%   {opacity: 1;}
-	   		60%  {opacity: 0;}
-	   		100% {opacity: 1;}
-		}
 	}
 
-	.animate-flicker-four {
-		animation: fadeIn 4s;
-		opacity:0;
-		bottom: 10%;
-		left: 8%;
-
-		@keyframes fadeIn {
-			0%   {opacity: 0;}
-	    	40%  {opacity: 0.8;}
-	    	100% {opacity: 0;}
-		}
-	}
-	.animate-flicker-five {
-		animation: fadeIn 5s;
-		animation-delay: 2s;
-		opacity: 0;
-		top: 5%;
-		right: 35%;
-		transform: rotate(-55deg);
-
-		@keyframes fadeIn {
-			0%   {opacity: 0;}
-	    	60%  {opacity: 1;}
-	    	100% {opacity: 0;}
-		}
-	}
-
-	.animate-flicker-six{
-		animation: fadeOut 6s;
-		animation-delay: 1.5s;
-		opacity: 1;
-		right: 40%;
-		bottom: 20%;
-		transform: rotate(-85deg);
-
-		@keyframes fadeOut {
-			0%   {opacity: 1;}
-			30%  {opacity: 0.5;}
-	    	100% {opacity: 1;}
-		}
-	}
-
-	.animate-flicker-seven {
-		animation: fadeIn 6s;
-		animation-delay: 2s;
-		opacity: 0;
-		bottom: 10%;
-		right: 15%;
-  	@media (max-width: 900px) {
-  		bottom: 8%;
-  		right: 10%;
-  	}
-
-		@keyframes fadeIn {
-			0%   {opacity: 0;}
-			50%  {opacity: 1;}
-	   	 100% {opacity: 0;}
-		}
+	@keyframes fadeIn {
+		0%   {opacity: 0;}
+		50%  {opacity: 1;}
+   	 	100% {opacity: 0;}
 	}
 }
