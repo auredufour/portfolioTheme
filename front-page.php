@@ -64,20 +64,20 @@
 	</section>
 
 	<section class="about" id="about">
-			<div class="wrapper about-flex">
+			<div class="wrapper about-flex clearfix">
 
 		<?php if( have_rows('biography') ): ?>
 			<?php while ( have_rows('biography') ) : the_row(); ?> 
-				<div class="biography-content">
-		 			<?php the_sub_field('biography-description-part-1'); ?>
-		 			<?php the_sub_field('biography-description-part-2'); ?>
-		 		</div>
 		 		<div class="biography-quote" data-stellar-ratio="1.3" >
 		 			<?php the_sub_field('biography-quote'); ?>
 		 			<div class="biography-background">
 		 				<span><?php the_sub_field('biography-quote-background');?></span>
 		 				<span><?php the_sub_field('biography-quote-background');?></span>
 		 			</div>
+		 		</div>
+				<div class="biography-content">
+		 			<?php the_sub_field('biography-description-part-1'); ?>
+		 			<?php the_sub_field('biography-description-part-2'); ?>
 		 		</div>
 			<?php endwhile; ?> 
 		<?php endif; ?>	

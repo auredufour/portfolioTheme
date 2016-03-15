@@ -3,7 +3,7 @@ $(function(){
 	console.log("It's working");
 // Stellar plugin
 	var $window = $(window);
-	if( ($window.width() > 750) ){
+	if( ($window.width() > 800) ){
         $(window).stellar({
 			hideDistantElements: false,
 		});

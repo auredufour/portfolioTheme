@@ -15,7 +15,7 @@
 <body <?php body_class(); ?>>
 <div class="wrapper-flex">
 <div class="flex-left">
-  <a href="http://aureliedufour.com"><img src="<?php echo hackeryou_get_thumbnail_url( $post )?>" alt=""></a>
+  <a class="logo-nav" href="http://aureliedufour.com"><img src="<?php echo hackeryou_get_thumbnail_url( $post )?>" alt=""></a>
     <div class="line"></div>
     <div class="line"></div>
 <!--     <img src=" <?php bloginfo('template_directory')?>/images/AD.png" alt="">

@@ -87,10 +87,14 @@ a {
 .flex-left {
 	font-size: 1.6rem;
 	color: $white;
+}
+#menu-menu-1 a {
+	color: $white;
+	letter-spacing: 0.15rem;
+}
 
-	#menu-social-media-links {
-		font-size: 2.2rem;
-	}
+#menu-social-media-links, #menu-social-media-links-1 {
+	font-size: 2rem;
 }
 
 .biography-quote {
@@ -116,10 +120,6 @@ a {
 	font-size: 2rem;
 	font-weight: 700;
 	color: $bluefooter;
-}
-
-footer #menu-social-media-links-1 i{
-	font-size: 2rem;
 }
 
 .portfolio-text p {

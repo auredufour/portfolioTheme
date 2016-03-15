@@ -5,8 +5,6 @@
 }
 
 .about-flex {
-	display: flex; 
-	flex-flow: row wrap;
 	position: relative;
 	padding: 10rem 10rem 16rem;
 
@@ -15,47 +13,93 @@
 	}
 
 	@media (max-width: 850px) {
-		padding: 10rem 6rem 16rem;
+		padding: 10rem 12rem 12rem 6rem;
 	}
 
-	@media (max-width: 750px) {
-		display: block;
+	@media (max-width: 650px) {
+		padding: 8rem 6rem;
 	}
-
-	@media (max-width: 400px) {
-		padding: 2rem;
+	@media (max-width: 550px) {
+		padding: 8rem 6rem 12rem;
+	}
+	@media (max-width: 450px) {
+		padding: 6rem 3rem 10rem;
 	}
 
 	.biography-quote {
-		flex: 1 0 28%;
-		flex-flow: row wrap;
-
+		width: 30%;
 		margin: 0;
 		padding: 3rem;
 		position: relative;
-		left: -13rem;
+		left: -18rem;
 		background: $blue;
-		order: -1;
 		// Have to put a height to maintain the dimension of the div
 		height: 100%;
+		z-index: 100;
+		float: left;
 
-		@media (max-width: 1150px){
-			flex: 1 0 35%;
-		}	
-
-		@media (max-width: 750px) {
-			width: 60%;
-			display: block;
-			top: -4rem;
-			left: 0rem;
-			order: 1;
+		@media (max-width:1500px){
+			left: -15rem;
 		}
 
-		@media (max-width: 400px) {
+		@media (max-width:1350px){
+			left: -13rem;
+		}
+
+		@media (max-width: 1150px){
+			width: 32%;
+			left: -11rem;
+		}	
+
+		@media (max-width: 1000px){
+			width: 35%;
+			left: -5rem;
+		}	
+
+		@media (max-width: 800px) {
+			width: 55%;
+			bottom: -40rem;
+			left: 5rem;
+		}
+
+		@media (max-width: 750px){
+			bottom: -43rem;
+			left: 3rem;
+		}
+
+		@media (max-width: 700px){
+			bottom: -45rem;
+		}
+
+		@media (max-width: 650px) {
 			width: 100%;
-			top: 0;
+			margin:0;
+			left: 0.5rem;
 			right: 0;
-			left: 0;
+			bottom: -35rem;
+		}
+		@media (max-width: 600px){
+			bottom: -38rem;
+		}
+
+		@media (max-width: 550px){
+			bottom: -44rem;
+		}
+
+		@media (max-width: 450px){
+			bottom: -50rem;
+		}
+		@media (max-width: 450px){
+			bottom: -46rem;
+		}
+		@media (max-width: 400px){
+			bottom: -42rem;
+		}
+		@media (max-width: 380px){
+			bottom: -45rem;
+		}
+		@media (max-width: 320px){
+			bottom: -56rem;
 		}
 
 		p {
@@ -64,7 +108,7 @@
 		}
 	}
 
-	.biography-background{
+	.biography-background {
 		@media (max-width: 400px) {
 			display: none;
 		}	
@@ -90,31 +134,39 @@
 	}
 	
 	.biography-content {
-		// flex: 1 0 70%;
 		width: 70%;
 		margin: 0;
 		padding: 5rem;
 		position: relative;
 		box-shadow: 1rem 1rem 1.1rem rgba(0,0,0,0.08);
 		background: $white;
+		float: left;
 
 		@media (max-width: 1150px) {
-			// flex: 1 0 65%;
-			width: 65%;
+			width: 68%;
 			margin: 0.5rem auto;
 		}
+		@media (max-width: 1000px){
+			width: 65%;
+		}	
 
-		@media (max-width: 750px) {
-			// flex: 1 0 70%;
-			width: 70%;
-			margin-left: 6rem;
+		@media (max-width: 800px) {
+			width: 80%;
+			top: -20rem;
+			right: -15rem;
 		}
 
-		@media (max-width: 400px) {
-			display: block;
+		@media (max-width: 780px){
+			width: 88%;
+			right: -10rem;
+		}
+
+		@media (max-width: 650px) {
 			width: 100%;
 			margin: 0.5rem;
 			padding: 3rem;
+			right: 0;
+			left: 0;
 		}	
 	}
 }
